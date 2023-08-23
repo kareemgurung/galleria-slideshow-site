@@ -1,0 +1,13 @@
+@use "../../styles/mixins" as mixins;
+
+.button {
+  @include mixins.link1;
+
+  display: block;
+  border: 0px solid transparent;
+  background-color: inherit;
+  text-transform: uppercase;
+  padding-inline: 0;
+
+  cursor: pointer;
+}

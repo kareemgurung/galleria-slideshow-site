@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import "resets";
+@import "mixins";
+
+body {
+  font-family: "Libre Baskerville", serif;
+
+  @include desktop {
+    margin-inline: auto;
+    width: min(94.5vw, 1360px);
+  }
+}

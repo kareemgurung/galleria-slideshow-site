@@ -1,0 +1,45 @@
+@use "../../styles/mixins" as mixins;
+
+.container {
+  display: grid;
+  gap: 27px;
+
+  margin-top: 24px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 24px;
+
+    img {
+      display: block;
+      width: 113px;
+      height: 32px;
+
+      cursor: pointer;
+    }
+  }
+
+  hr {
+    height: 1px;
+    background: mixins.$primary-color-300;
+    border: none;
+  }
+
+  @include mixins.tablet {
+    margin-top: 29px;
+
+    div {
+      margin-inline: 40px;
+    }
+  }
+
+  @include mixins.desktop {
+    margin-top: 40px;
+
+    div {
+        margin-inline: 0;
+    }
+  }
+}
