@@ -6,7 +6,7 @@
 
   margin-top: 24px;
 
-  div {
+  nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +30,7 @@
   @include mixins.tablet {
     margin-top: 29px;
 
-    div {
+    nav {
       margin-inline: 40px;
     }
   }
@@ -38,7 +38,7 @@
   @include mixins.desktop {
     margin-top: 40px;
 
-    div {
+    nav {
         margin-inline: 0;
     }
   }

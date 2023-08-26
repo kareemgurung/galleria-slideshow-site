@@ -1,0 +1,39 @@
+@import "../../styles/mixins";
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 24px;
+  
+    &__name {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      color: $primary-color-100;
+  
+      h2 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: normal;
+      }
+  
+      p {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.7528;
+      }
+    }
+  
+    &__nextprev {
+      display: flex;
+      gap: 5px;
+
+      button {
+        border: none;
+        background-color: inherit;
+        height: 16px;
+      }
+    }
+  }

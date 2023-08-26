@@ -3,6 +3,7 @@ $primary-color-200: hsla(0, 0%, 49%, 1);
 $primary-color-300: hsla(0, 0%, 90%, 1);
 $primary-color-400: hsla(0, 0%, 95%, 1);
 $primary-color-500: hsla(0, 0%, 89%, 1);
+$primary-color-600: hsla(0, 0%, 100%, 1);
 
 @mixin display {
   color: $primary-color-400;
@@ -25,7 +26,7 @@ $primary-color-500: hsla(0, 0%, 89%, 1);
 @mixin heading2 {
   @include heading();
   font-size: 24px;
-  line-height: normal;
+  line-height: 29px;
 }
 
 @mixin heading3 {
@@ -53,7 +54,6 @@ $primary-color-500: hsla(0, 0%, 89%, 1);
 
 @mixin link {
   color: $primary-color-200;
-  text-align: center;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

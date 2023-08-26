@@ -5,6 +5,8 @@
 body {
   font-family: "Libre Baskerville", serif;
 
+  // overflow: hidden;
+
   @include desktop {
     margin-inline: auto;
     width: min(94.5vw, 1360px);

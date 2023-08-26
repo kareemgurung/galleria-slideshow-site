@@ -1,0 +1,90 @@
+@import "../../styles/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin: 24px 24px 67px;
+  gap: 54px;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+    position: relative;
+  }
+
+  .image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 280px;
+    background-color: $primary-color-600;
+
+    position: absolute;
+    bottom: 64px;
+    gap: 8px;
+  }
+
+  h2 {
+    color: $primary-color-100;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px; /* 120.833% */
+  }
+
+  p {
+    color: $primary-color-200;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .artistImage {
+    display: block;
+    width: 64px;
+    height: 64px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+
+    gap: 68px;
+
+    position: relative;
+
+    p {
+      color: $primary-color-200;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+  }
+
+  .year {
+    color: $primary-color-400;
+    text-align: right;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 100px; /* 100% */
+
+    position: absolute;
+
+    right: 0;
+    top: -74px;
+    z-index: -1;
+  }
+
+  .link {
+    @include link2;
+    text-transform: uppercase;
+  }
+}
+
+
