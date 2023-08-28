@@ -10,6 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ image, artName, artistName }) => {
   return (
     <Link to="/" className={styles.container}>
+        <div className={styles.gradient}></div>
       <div className={styles.desc}>
         <h2>{artName}</h2>
         <p>{artistName}</p>

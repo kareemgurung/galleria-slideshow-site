@@ -5,6 +5,11 @@ $primary-color-400: hsla(0, 0%, 95%, 1);
 $primary-color-500: hsla(0, 0%, 89%, 1);
 $primary-color-600: hsla(0, 0%, 100%, 1);
 
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction
+}
+
 @mixin display {
   color: $primary-color-400;
   font-size: 200px;

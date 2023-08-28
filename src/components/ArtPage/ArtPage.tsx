@@ -34,15 +34,17 @@ const ArtPage = () => {
               aria-label={art.name}
             />
           </picture>
-          <div className={styles.name}>
-            <h2>{art.name}</h2>
-            <p>{art.artist.name}</p>
+          <div className={styles.floater}>
+            <div className={styles.name}>
+              <h2>{art.name}</h2>
+              <p>{art.artist.name}</p>
+            </div>
+            <img
+              src={art.artist.image}
+              alt={art.artist.name}
+              className={styles.artistImage}
+            />
           </div>
-          <img
-            src={art.artist.image}
-            alt={art.artist.name}
-            className={styles.artistImage}
-          />
         </div>
         <div className={styles.container__desc}>
           <span className={styles.year}>{art.year}</span>

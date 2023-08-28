@@ -1,16 +1,12 @@
 @import "../../styles/mixins";
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include flexCenter(column);
 
   margin: 24px 24px 67px;
-  gap: 54px;
+  gap: 172px;
 
   &__title {
-    display: flex;
-    flex-direction: column;
-    gap: 54px;
     position: relative;
   }
 
@@ -19,16 +15,21 @@
     object-fit: contain;
   }
 
-  .name {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    width: 280px;
-    background-color: $primary-color-600;
+  .floater {
+    @include flexCenter(column);
 
     position: absolute;
-    bottom: 64px;
+    bottom: -118px;
+    left: 0;
+  }
+
+  .name {
+    @include flexCenter(column);
+    padding: 24px;
     gap: 8px;
+
+    width: 280px;
+    background-color: $primary-color-600;
   }
 
   h2 {
@@ -49,11 +50,11 @@
     display: block;
     width: 64px;
     height: 64px;
+    margin-left: 24px;
   }
 
   &__desc {
-    display: flex;
-    flex-direction: column;
+    @include flexCenter(column);
 
     gap: 68px;
 
@@ -85,6 +86,81 @@
     @include link2;
     text-transform: uppercase;
   }
+
+  @include tablet {
+    gap: 139px;
+    margin: 40px 40px 53px;
+
+    .image {
+      height: 560px;
+      width: 475px;
+    }
+
+    .floater {
+      bottom: unset;
+      left: unset;
+      top: 0;
+      right: 0;
+    }
+    .name {
+      padding: 0 0 67px 65px;
+      width: 445px;
+      gap: 24px;
+    }
+
+    h2 {
+      width: 50%;
+      overflow-wrap: break-word;
+      font-size: 56px;
+      line-height: 64px; /* 114.286% */
+    }
+
+    .artistImage {
+      width: 128px;
+      height: 128px;
+
+      margin-left: 262px;
+    }
+
+    &__desc {
+      gap: 40px;
+      padding-inline: 115px;
+    }
+
+    .year {
+      font-size: 200px;
+      line-height: 150px; /* 75% */
+
+      right: unset;
+      left: 0;
+      top: -74px;
+    }
+  }
+
+  @include desktop {
+    @include flexCenter(row);
+    gap: 410px;
+    margin: 100px 0 128px;
+
+    .floater {
+      left: 410px;
+      right: unset;
+    }
+
+    .artistImage {
+      margin-left: 95px;
+      margin-top: 258px;
+    }
+
+    &__desc {
+      gap: 81px;
+      padding: 115px 125px 0 0;
+    }
+
+    .year {
+      right: 0;
+      left: unset;
+      top: 0;
+    }
+  }
 }
-
-
