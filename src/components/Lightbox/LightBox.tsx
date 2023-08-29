@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styles from "./lightbox.module.scss";
-import ImageContext from "../../context/LightBoxContext";
+import ImageContext from "../../context/ImageContext";
 
 interface LightBoxProps {
   image: string;

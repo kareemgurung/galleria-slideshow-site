@@ -4,8 +4,8 @@ import Footer from "../Footer/Footer";
 import items from "../../data.json";
 import ViewImage from "../ViewImage/ViewImage";
 import LightBox from "../Lightbox/LightBox";
-import ImageContext from "../../context/LightBoxContext";
-import { useContext } from "react";
+import ImageContext from "../../context/ImageContext";
+import { useContext, useEffect } from "react";
 
 type ArtParams = {
   artId: string;
@@ -16,6 +16,15 @@ const ArtPage = () => {
   const ctx = useContext(ImageContext);
 
   const art = items.find((item) => item.id === artId);
+
+  useEffect(() => {
+    if (!art) {
+      ctx.setIndex(0);
+    } else {
+      const artIndex = items.indexOf(art);
+      ctx.setIndex(artIndex);
+    }
+  }, [art, ctx]);
 
   if (!art) {
     return <div>Art Page not found</div>;

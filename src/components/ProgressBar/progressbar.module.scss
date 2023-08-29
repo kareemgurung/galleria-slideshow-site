@@ -1,0 +1,21 @@
+@import "../../styles/mixins";
+
+.static,
+.dynamic {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  
+}
+
+.static {
+    width: 100%;
+    z-index: 1;
+    background-color: $primary-color-300;
+}
+
+.dynamic {
+    z-index: 2;
+    background-color: $primary-color-100;
+    transition: 0.3s all ease-in-out;
+}

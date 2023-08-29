@@ -1,4 +1,4 @@
-@use "../../styles/mixins" as mixins;
+@import "../../styles/mixins";
 
 .container {
   display: grid;
@@ -23,23 +23,46 @@
 
   hr {
     height: 1px;
-    background: mixins.$primary-color-300;
+    background: $primary-color-300;
     border: none;
   }
 
-  @include mixins.tablet {
+  .link {
+    color: $primary-color-200;
+    text-align: right;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.929px;
+
+    &:hover {
+      color: $primary-color-100;
+    }
+  }
+
+
+  @include tablet {
     margin-top: 29px;
 
     nav {
       margin-inline: 40px;
     }
+
+    .link {
+      font-style: 12px;
+      letter-spacing: 2.571px;
+    }
   }
 
-  @include mixins.desktop {
+  @include desktop {
+    @include maxWidth;
     margin-top: 40px;
 
     nav {
-        margin-inline: 0;
+      margin-inline: 0;
     }
   }
 }

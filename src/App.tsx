@@ -2,7 +2,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import ArtPage from "./components/ArtPage/ArtPage";
-import { ImageContextProvider } from "./context/LightBoxContext";
+import { ImageContextProvider } from "./context/ImageContext";
 
 const Root = () => {
   return (

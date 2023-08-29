@@ -1,8 +1,7 @@
 @import "../../styles/mixins";
 
 .container {
-  display: flex;
-  flex-direction: column;
+  @include flexCenter(column);
   gap: 24px;
   margin: 24px;
 
@@ -16,7 +15,7 @@
   }
 
   @include desktop {
-    margin-inline: 0;
+    @include maxWidth;
     margin-bottom:47px;
     grid-template-columns: repeat(4, 1fr);
   }

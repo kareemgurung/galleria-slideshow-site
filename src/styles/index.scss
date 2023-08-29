@@ -9,6 +9,6 @@ body {
 
   @include desktop {
     margin-inline: auto;
-    width: min(94.5vw, 1360px);
+    // width: min(94.5vw, 1360px);
   }
 }

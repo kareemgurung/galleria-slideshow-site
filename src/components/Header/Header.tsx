@@ -1,9 +1,10 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import Button from "../Button/Button";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./header.module.scss";
 
 const Header = () => {
-  const navigate = useNavigate();
+  const location = useLocation();
+  const isSlideShow = location.pathname.startsWith("/art");
+
   return (
     <header className={styles.container}>
       <nav>
@@ -14,11 +15,9 @@ const Header = () => {
             aria-label="galleria logo"
           />
         </NavLink>
-        <Button
-          text="start slideshow"
-          type="button"
-          onClick={() => navigate("/test")}
-        />
+        <NavLink className={styles.link} to={isSlideShow ? "/" : "/art/1"}>
+          {isSlideShow ? "stop slideshow" : "start slideshow"}
+        </NavLink>
       </nav>
       <hr />
     </header>
