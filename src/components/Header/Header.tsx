@@ -9,7 +9,7 @@ const Header = () => {
       <nav>
         <NavLink to="/">
           <img
-            src="./assets/shared/logo.svg"
+            src="../../../images/shared/logo.svg"
             alt="galleria logo"
             aria-label="galleria logo"
           />

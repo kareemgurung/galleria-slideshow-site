@@ -1,4 +1,5 @@
 // declaration.d.ts
 declare module "*.scss";
 
-declare module 'react-responsive-masonry';
+declare module '*.jpg';
+declare module '*.svg';

@@ -9,6 +9,7 @@ const Main = () => {
         return (
           <Card
             key={item.id}
+            id={item.id.toString()}
             image={item.images.thumbnail}
             artName={item.name}
             artistName={item.artist.name}
